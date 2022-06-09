@@ -10,7 +10,7 @@ class Item extends Component {
             <li onMouseEnter={this.handleMouse(true)} onMouseLeave={this.handleMouse(false)} onChange={this.changeDone(todo.id)}
             style={{background:this.state.mouseFlag?'#ddd':'none'}}>
                 <label>
-                    <input type="checkbox" defaultChecked={todo.done}/>
+                    <input type="checkbox" checked={todo.done}/>
                     <span>{todo.name}</span>
                 </label>
                 <button className="btn btn-danger" style={{display:this.state.mouseFlag?'block':"none"}} onClick={this.deleteTodo(todo.id)}>删除</button>
