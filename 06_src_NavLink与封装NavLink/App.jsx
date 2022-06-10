@@ -1,15 +1,15 @@
 import React, {Component} from 'react'
-import {Link, Route} from "react-router-dom";
-import Home from './components/Home/Home'
-import About from './components/About/About'
-
+import {Route} from "react-router-dom";
+import Home from './pages/Home/Home'
+import About from './pages/About/About'
+import MyNavLink from "./components/MyNavLink/MyNavLink";
 export default class App extends Component {
     render() {
         return (
             <div>
-                <Link to="/home">Home</Link>
+                <MyNavLink to={"/home"}>Home</MyNavLink>
                 <div>&nbsp;</div>
-                <Link to="/about">About</Link>
+                <MyNavLink to={"/about"}>About</MyNavLink>
                 <hr/>
                 <Route path="/home" component={Home}/>
                 <Route path="/about" component={About}/>

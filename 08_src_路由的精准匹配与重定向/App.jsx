@@ -15,8 +15,8 @@ export default class App extends Component {
                 <Switch>
                     {/*默认使用的是模糊匹配*/}
                     {/*exact 严格匹配 有需要再开*/}
-                    <Route path="/home" component={Home}/>
-                    <Route path="/about" component={About}/>
+                    <Route exact path="/home" component={Home}/>
+                    <Route exact path="/about" component={About}/>
                     {/*redirect 当所有路由都匹配不上的时候，匹配redirect的路由，作为兜底*/}
                     <Redirect to="/home"/>
                 </Switch>
